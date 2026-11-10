@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/figtree";
+@theme {
+  --color-purple: #261A66; --color-orange: #EF5F18; --color-ink: #1b1440;
+  --color-tint: #F3F1FA; --color-warm: #FBF9F6; --color-grey: #5b5873;
+  --font-display: "Fraunces Variable", Georgia, serif; --font-sans: "Figtree Variable", system-ui, sans-serif;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-sans); color: var(--color-ink); background:#fff; -webkit-font-smoothing: antialiased; }
+h1,h2,h3 { font-family: var(--font-display); color: var(--color-purple); letter-spacing: -0.02em; }
+:focus-visible { outline: 3px solid var(--color-orange); outline-offset: 3px; }
+.hero-in { animation: up .8s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes up { from { opacity:0; transform: translateY(18px);} to {opacity:1; transform:none;} }
+@media (prefers-reduced-motion: reduce) { *{animation:none!important;transition:none!important;scroll-behavior:auto!important} }
